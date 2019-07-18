@@ -12,11 +12,10 @@ while end:
     for i in range(0,3):
         while arr[i] in s:        
             if arr[i] == s[i]:
-                strike += 1
-                break
+                strike += 1            
             else:
                 ball += 1
-                break
+            break
     print(strike,"스트라이크",ball,"볼") 
     if strike == 3:
         print("성공하셨습니다.")
