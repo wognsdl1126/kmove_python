@@ -60,9 +60,13 @@ while True:
         page = (len(custlist)-1)
         print(page)
     elif choice=="C":
-        print("현재 고객 정보 조회")
-        print(custlist[page])
-        print(page + 1, "페이지 입니다.")       
+        global page
+        if page > 0:
+            print("현재 고객 정보 조회")
+            print(custlist[page])
+            print(page + 1, "페이지 입니다.")
+        else:
+            print("고객정보가 없습니다.")
     elif choice == 'P':
         print("이전 고객 정보 조회")
         page -= 1
